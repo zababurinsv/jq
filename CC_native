@@ -1,0 +1,9 @@
+#!/bin/bash
+
+git submodule update --init
+
+autoreconf -fi
+
+./configure --with-oniguruma=builtin --disable-maintainer-mode
+
+make LDFLAGS=-all-static
