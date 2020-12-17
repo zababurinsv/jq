@@ -1,0 +1,9 @@
+.PHONY: dep all clean distclean install uninstall
+
+install:
+	install ./*.js ./*.wasm ../dist/
+	rm -fr *.js *.o *.html *.wasm *.wasm.map
+uninstall:
+	rm -rf ../dist/*.js ../dist/*.wasm
+clean:
+	rm -fr idbfs.js idbfs.o idbfs.html idbfs.wasm idbfs.wasm.map idbfs.data wmfs.o wmfs.html wmfs.wasm wmfs.wasm.map wmfs.data wmfs.js wmfs.mjs
